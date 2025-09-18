@@ -1,5 +1,20 @@
-import 'package:tugas_jobsheet_3/tugas_jobsheet_3.dart' as tugas_jobsheet_3;
+import 'dart:io';
 
-void main(List<String> arguments) {
-  print('Hello world: ${tugas_jobsheet_3.calculate()}!');
+void main() {
+  while (true) {
+    print("\n=== MENU PROGRAM ===");
+    print("1. Hitung Faktorial");
+    print("2. Cek Bilangan Prima");
+    print("3. Keluar");
+
+    stdout.write("Pilih menu (1/2/3): ");
+    String? pilihan = stdin.readLineSync();
+
+    if (pilihan == "3") {
+      print("Program selesai.");
+      break;
+    } else {
+      print("Fitur belum tersedia.");
+    }
+  }
 }
