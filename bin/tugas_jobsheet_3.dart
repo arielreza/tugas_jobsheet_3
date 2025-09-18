@@ -22,7 +22,13 @@ void main() {
       }
 
     } else if (pilihan == "2") {
-      print("Fitur cek bilangan prima belum tersedia.");
+      stdout.write("Masukkan bilangan: ");
+      int? n = int.tryParse(stdin.readLineSync() ?? "");
+      if (n == null) {
+        print("Input tidak valid.");
+      } else {
+        cekPrima(n); // panggil fungsi baru
+      }
 
     } else if (pilihan == "3") {
       print("Program selesai.");
@@ -41,4 +47,9 @@ int hitungFaktorial(int n) {
     hasil *= i;
   }
   return hasil;
+}
+
+// Kerangka fungsi cek prima
+void cekPrima(int n) {
+  print("Cek prima untuk $n (fitur belum selesai)");
 }
