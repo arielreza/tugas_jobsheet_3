@@ -51,5 +51,17 @@ int hitungFaktorial(int n) {
 
 // Kerangka fungsi cek prima
 void cekPrima(int n) {
-  print("Cek prima untuk $n (fitur belum selesai)");
+  if (n < 2) {
+    print("$n bukan bilangan prima.");
+    return;
+  }
+
+  for (int i = 2; i < n; i++) {
+    if (n % i == 0) {
+      print("$n bukan bilangan prima.");
+      return;
+    }
+  }
+  print("$n adalah bilangan prima.");
 }
+
